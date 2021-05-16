@@ -2,5 +2,504 @@
 <title>
 B3 ROSTER
 </title>
+<head>
+<style>
+</style>
+<meta charset="UTF-8">
+ <script>
 
+function expandAll()
+{
+      document.getElementById('para').style.display = "inline";
+      document.getElementById('mydiv').innerHTML = "[Close News] "
+
+      document.getElementById('paraNotes').style.display = "inline";
+      document.getElementById('mydivNotes').innerHTML = "[Close Roster Notes] "
+
+      if (document.getElementById('paraChangelog')) {
+         document.getElementById('paraChangelog').style.display = "inline";
+         document.getElementById('mydivChangelog').innerHTML = "             [Close Changelog] "
+      }
+
+      document.getElementById('priceList').style.display = "inline";
+      document.getElementById('mydivPriceList').innerHTML = "[Close Price List] "
+
+      document.getElementById('paraPhoneNums').style.display = "inline";
+      document.getElementById('divPhoneNums').innerHTML = "[Close Phone Numbers] "
+}
+function contractAll()
+{
+      document.getElementById('para').style.display = "none";
+      document.getElementById('mydiv').innerHTML = "[+] "
+
+      document.getElementById('paraNotes').style.display = "none";
+      document.getElementById('mydivNotes').innerHTML = "[+] "
+
+   if (document.getElementById('paraChangelog')) {
+
+      document.getElementById('paraChangelog').style.display = "none";
+      document.getElementById('mydivChangelog').innerHTML = "             [+] "
+   }
+      document.getElementById('priceList').style.display = "none";
+      document.getElementById('mydivPriceList').innerHTML = "[+] "
+
+      document.getElementById('paraPhoneNums').style.display = "none";
+      document.getElementById('divPhoneNums').innerHTML = "[+] "
+
+}
+function expandContract()
+{
+   if(document.getElementById('mydiv').innerHTML == "[+] ")
+   {
+      document.getElementById('para').style.display = "inline";
+      document.getElementById('mydiv').innerHTML = "[Close News] "
+   }
+   else
+   {
+      document.getElementById('para').style.display = "none";
+      document.getElementById('mydiv').innerHTML = "[+] "
+   }
+}
+function expandContractNotes()
+{
+   if(document.getElementById('mydivNotes').innerHTML == "[+] ")
+   {
+      document.getElementById('paraNotes').style.display = "inline";
+      document.getElementById('mydivNotes').innerHTML = "[Close Roster Notes] "
+   }
+   else
+   {
+      document.getElementById('paraNotes').style.display = "none";
+      document.getElementById('mydivNotes').innerHTML = "[+] "
+   }
+}
+function expandContractPriceList()
+{
+   if(document.getElementById('mydivPriceList').innerHTML == "[+] ")
+   {
+      document.getElementById('priceList').style.display = "inline";
+      document.getElementById('mydivPriceList').innerHTML = "[Close Price List] "
+   }
+   else
+   {
+      document.getElementById('priceList').style.display = "none";
+      document.getElementById('mydivPriceList').innerHTML = "[+] "
+   }
+}
+function expandContractChangelog()
+{
+   if(document.getElementById('mydivChangelog').innerHTML == "             [+]")
+   {
+      document.getElementById('paraChangelog').style.display = "inline";
+      document.getElementById('mydivChangelog').innerHTML = "             [Close Changelog] "
+   }
+   else
+   {
+      document.getElementById('paraChangelog').style.display = "none";
+      document.getElementById('mydivChangelog').innerHTML = "             [+]"
+   }
+}
+
+function expandContractPhoneNums()
+{
+   if(document.getElementById('divPhoneNums').innerHTML == "[+] ")
+   {
+      document.getElementById('paraPhoneNums').style.display = "inline";
+      document.getElementById('divPhoneNums').innerHTML = "[Close Phone Numbers] "
+   }
+   else
+   {
+      document.getElementById('paraPhoneNums').style.display = "none";
+      document.getElementById('divPhoneNums').innerHTML = "[+] "
+   }
+}
+
+function blinker(id, mode) {
+   var f = document.getElementById(id);
+
+   if (f)
+   {
+      if (mode == "on")
+      {
+         f.style.display = "inline";
+         f.innerHTML = "<b>   [New]   </b>";
+         setInterval(function() {
+            f.style.background = (f.style.background == 'none' ? '#99FF99' : 'none');
+         }, 1000);
+      }
+      else if (mode == "off")
+      {
+         f.style.display = 'none';
+      }
+   }
+}
+
+function OnLoad() {
+   blinker("LastUpdatePhotos", "off");
+   blinker("LastUpdatePriceList", "off");
+   blinker("LastUpdateNews", "off");
+   blinker("LastUpdateLegend", "off");
+}
+
+</script>
+
+
+</head>
+
+<body onload="OnLoad();" style="width: 500px">
+
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=10119720;
+var sc_invisible=1;
+var sc_security="92844a60";
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify traffic
+stats" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/10119720/0/92844a60/1/"
+alt="shopify traffic stats"></a></div></noscript>
+<!-- End of StatCounter Code for Default Guide -->
+<!-- <mark style="background-color:#00FF00;">%</mark> -->
+<!-- light red: #FF9090 -->
+<!-- light yellow: #FFFF99 #ffff7f-->
+<!-- light BLUE: #99CCFF -->
+<!-- light grey: #CCCCCC -->
+<!-- light green: #99FF99 -->
+<!-- light light green: #BCED91 -->
+<!-- hazel/brown: #f8c89f , #c5c1a4-->
+<!-- light ORANGE: #FF9933 GOLD: ffd700-->
+<!--light pink: #ffc0cb -->
+<pre width="10"><span id = "expandAll" style = "cursor:hand;color:royalblue" onclick = "expandAll();">[+ all]</span>
+<span id = "contractAll" style = "cursor:hand;color:royalblue" onclick = "contractAll();">[Close all]</span>
+<div>
+
+B3 ROSTER
+
+<b>Status</b> -     Draft
+             Pending Confirmation
+          <b><mark>>> Final <<</mark></b>
+             <!-- ABOVE.. for <mark>ed line, "<" starts at 11 . /// DRAFT "<" is 18 -->
+<!-- <span id = "paraChangelog" style = "display:none">    -->
+<b>Changelog</b> -  #4 (Sun 16/05, 16:32)   [Final]<span id = "paraChangelog" style = "display:none"> 
+             #3 (Sun 16/05, 16:32)   Fixed times for Mon
+             #2 (Sun 16/05, 15:22)   [Pending Confirmation]
+                                     Draft 2
+             #1 (Sun 16/05, 10:54)   Draft #1</span>
+<!-- ABOVE.. col: 14 #x, 38 [x] --><span id = "mydivChangelog" style = "cursor:hand;color:royalblue" onclick = "expandContractChangelog();">             [+]</span>
+
+<b>Photos</b> -     <a href="https://www.flickr.com/gp/131712031@N02/Ft83xa">2014</a>, <a href="https://www.flickr.com/gp/131712031@N02/C314Q0">2015</a>, <a href="https://www.flickr.com/gp/131712031@N02/vtX8i9" target="_blank">2016</a>, <!--<a href="https://flic.kr/s/aHskUctFbt" target="_blank">2017</a>--><a href="https://unit-zero.myDS.me/photo/?t=Albums/album_62332032303137#Albums/album_62332032303137" target="_blank"><b>2017</b></a>, <a href="https://unit-zero.myDS.me/photo/?t=Albums/album_62332032303138#Albums/album_62332032303138" target="_blank"><b>2018</b></a>, <a href="https://unit-zero.myDS.me:5001/mo/sharing/BjnSIvuRa" target="_blank"><b>2019</b></a><span id="LastUpdatePhotos">(checking...)</span>
+
+<b>Price List</b> - <span id = "mydivPriceList" style = "cursor:hand;color:royalblue" onclick = "expandContractPriceList();">[+] </span> <span id="LastUpdatePriceList"> (checking..) </span>
+<div id = "priceList" style = "display:none">
+             <b> Employee price list </b>
+                 <b> (price - $1.0)</b>
+                 Baguette (p) -        $4.00
+                 Baguette (g) -        $6.00
+
+                 <b> (price - $0.5)</b>
+                 Donuts -              $1.50
+                 Muffins -             $2.50
+                 Cake slices -         $2.50
+                 Coke bottles,
+                  Red Bull, V, etc -   $3.00
+                 Coke cans -           $1.00
+
+</div>
+<b>News -</b>       <span id = "mydiv" style = "cursor:hand;color:royalblue" onclick = "expandContract();">[+] </span> <span id="LastUpdateNews"> (checking..) </span>
+<div id = "para" style = "display:none">
+
+             <a href="https://www.b3cafe.com.au/private/LC-Schedule.pdf">LC-Schedule.pdf</a>
+
+             <mark style="background-color:#ffff7f;"> <b>0. Square machines and declined sales</b> </mark>
+             During a card sale, please take a few extra seconds
+             to confirm the payment goes through successfully. It's
+             more troublesome to run after people and get them to
+             come back. It'll also teach customers to wait until the
+             card company approves the sale, before they head off.
+             If square doesn't say "confirmed", but the customer's
+             phone says "paid", this means Square didn't process it
+             (and the phone confirmed too early). However we can't do
+             anything about this besides telling customer "Please
+             check later and if you weren't charged, please come back"
+
+             <mark style="background-color:#BCED91;"> <b>1. Employee price list changes </b> </mark>
+             Pls check employee price list if you want to buy anything!
+
+             <mark style="background-color:#ffc0cb;"> <b>2. Please put your phone on LOUD </b> </mark>
+             Hey guys, we had a sick person last week. I tried to
+             organise someone to cover, but had trouble calling people.
+             I called some people 20 times, sorry! If you coud, please
+             put your phone on LOUD or add me to your favourites
+             so that my phone calls get through. Don't worry, I will
+             call you if it's an emergency! Thanks! See NOTE 4 below.
+
+             <mark style="background-color:#FF9933;"> <b>3. When you're starting to feel sick </b> </mark>
+             Hey guys ! Some of you guys have been sick recently and
+             need to take a day off work. That's cool ! But please
+             let me (Mony) know asap if you're starting to feel sick.
+             I normally sleep at 9:00pm. So if you message me
+             afterwards I will only get it the next morning. In this
+             case, please call me and <mark>wake me up!!</mark> I much prefer
+             being woken up than bothering people in the morning.
+             No one likes me calling them in the morning to come in
+             earlier, or to come in on their day off !! Thanks guys !
+
+             <mark style="background-color:#99FF99;">4. <b>B3 Roster and LINE</b> </mark>
+             LINE sometimes does not refresh the roster after changes.
+             So please use - iOS: <b>Safari, Brave</b>, Android: <b>Brave</b></a>
+
+             <mark style="background-color:#99CCFF;"> <b>5. Taking food for yourself</b> </mark>
+             Guys a couple of people have asked me how much food
+             each person can take for themselves each day, for eg break
+             time. To clear up any confusion, the answer is -
+             - 1 baguette or 1 croissant
+             - 1 bottle of water
+             Any extra food or drink you want to take, please refer to
+             above "employee price list" and purchase them at that
+             price.
+
+             <mark style="background-color:#99CCFF;"> <b>6. When you arrive at work</b> </mark>
+             When you get to work, you should be ready to get straight
+             to it. If you need to do your hair or makeup, this should
+             be done <mark> before </mark> you arrive to work. We have noticed
+             a few people taking too long to get ready when they arrive,
+             so please double check your morning preparations and if
+             you're taking longer than a minute or two to get ready
+             once you arrive, then you should wake up earlier.
+
+             <a href=b3-roster-notes.html>b3-roster-notes.html</a>
+
+
+            <mark style="background-color:#FF9090;"> <b>7. When you're late to work  </b></mark>
+             ... everyone else is affected. Last week, too many
+             people were arriving to work late. To be clear, if
+             your shift starts 07:30, then the <b>absolute latest</b>
+             time to arrive is 07:30.
+
+             Thank you to everyone who always arrives before their
+             scheduled time, you really make mine and everyone
+             else's job easier! To everyone else, please try harder!!
+
+</div>
+<b>Phone Nums   </b><span id = "divPhoneNums" style = "cursor:hand;color:royalblue" onclick = "expandContractPhoneNums();">[+] </span>
+<div id = "paraPhoneNums" style = "display:none">
+        CP iPhone - <a href="tel:+61434978108">0434 978 108</a>
+        LC iPhone - <a href="tel:+61468575110">0468 575 110</a>
+        Mony - <a href="tel:+61435087341">0435 087 341</a>
+        Whitney - <a href="tel:+61433088706">0433 088 706</a>
+        Dad - <a href="tel:+61434824911">0434 824 911</a>
+        Mum - <a href="tel:+61435246867">0435 246 867</a>
+      </div>
+<b>THIS week's
+notes        </b><span id = "mydivNotes" style = "cursor:hand;color:royalblue" onclick = "expandContractNotes();">[+] </span> <span id="LastUpdateLegend"> (checking..) </span>
+<span id = "paraNotes" style = "display:none"></span>
+<!--
+Pla -  Wed only 
+Lucy - None
+|==========================================================================|
+| For week starting    Mon   22/03/2021                                    |
+|==========================================================================|
+| Pos   Time           Mon        Tue        Wed        Thu        Fri     |
+|--------------------------------------------------------------------------|
+|==========================================================================|
+|       CP                                                                 |
+| a    0730-1530|      Nere       Nere       Nere       Nere       Nere    |
+| b    0700-1430|7.5~  Bea$       Millie$    Millie$    Millie$    Millie$ |
+| c    1030-1530|5.0   Rei-       /          Pla-       Vechda@    /       |
+|                                                                          |
+|       LC                                                                 |
+| d    0630-1500|      Mony       Mony       Mony       Mony       Mony    |
+| e    0630-1430|8.0   Sean+      Bea        Bea      Bea#/Madi#   Bea     |
+|                                                                          |
+|==========================================================================|
+-->
+<em>Mon - Fri  
+      ~ b   |LC 0630-0730 (1.0)
+            |CP 0730-1430 (7.0) </em>
+<!--
+Mon   ^ Bea    |LC 0700-0730 (0.5)
+               |CP 0730-1500 (7.5)
+      - Rei   |CP 1030-1430 (4.0)
+      + Sean   |LC 0630-1430 (8.0)
+               |CP 1430-1530 (1.0)
+
+Tue   $ Bea    |LC 0700-0730 (0.5)
+               |CP 0730-1530 (8.0)
+
+Wed   $ Millie  |LC 0700-0730 (0.5)
+                |CP 0730-1530 (8.0)
+      - Pla    |CP 1030-1430 (4.0)
+      
+Thu   $ Millie  |LC 0700-0730 (0.5)
+                |CP 0730-1530 (8.0)
+      - Vechda   |CP 1030-1430 (4.0)
+
+
+Vechy 17
+Bea 31
+Sean 8
+
+
+-->
+Mon   + Pla   |LC 0630-0730 (1.0)
+              |CP 0730-1530 (8.0)
+      - Rei   |CP 1030-1430 (4.0)
+
+Tue   + Sean   |LC 0630-0730 (1.0)
+               |CP 0730-1530 (8.0) 
+      
+Wed   + Pla  |LC 0630-0730 (1.0)
+             |CP 0730-1530 (8.0) 
+ 
+Fri   + Vechy  |LC 0630-0730 (1.0)
+               |CP 0730-1530 (8.0)
+      * Bea   |LC 0630-1430 (8.0)
+              |CP 1430-1530 (1.0) 
+ 
+Notes: 
+Tue - Madi away
+Wed - Bea away
+|==========================================================================|
+| For week starting    Mon   17/05/2021                                    |
+|==========================================================================|
+| Pos   Time           Mon        Tue        Wed        Thu        Fri     |
+|--------------------------------------------------------------------------|
+|==========================================================================|
+|       CP                                                                 |
+| a    0730-1530|      Nere       Nere       Nere       Nere       Nere    |
+| b    0630-1430|8.0~  Pla+       Sean+      Pla+       Vechda     Vechy+  |
+| c    1030-1530|5.0   Rei-       /          /          Bea        Bea*    |
+|                                                                          |
+|       LC                                                                 |
+| d    0630-1500|      Mony       Mony       Mony       Mony       Mony    |
+| e    0630-1430|8.0   Bea        Bea        Madi       Madi       Bea*    |
+|                                                                          |
+|==========================================================================|
+
+Notes:
+Fri - Vechy away
+|==========================================================================|
+| For week starting    Mon   24/05/2021      DRAFT                         |
+|==========================================================================|
+| Pos   Time           Mon        Tue        Wed        Thu        Fri     |
+|--------------------------------------------------------------------------|
+|==========================================================================|
+|       CP                                                                 |
+| a    0730-1530|      Nere       Nere       Nere       Nere       Nere    |
+| b    0630-1430|8.0~  Pla+       Sean+      Pla+       Vechda     Millie  |
+| c    1030-1530|5.0   Rei-       Bea        Bea        Bea        /       |
+|                                                                          |
+|       LC                                                                 |
+| d    0630-1500|      Mony       Mony       Mony       Mony       Mony    |
+| e    0630-1430|8.0   Bea        Madi       Madi       Madi       Bea     |
+|                                                                          |
+|==========================================================================|
+
+<!--Mon - Fri  
+      ~ b   |LC 0700-0730 (0.5)
+            |CP 0730-1430 (7.0) 
+
+Mon   ^ Sean   |LC 0630-1430 (8.0)
+               |CP 1430-1530 (1.0)
+      & Millie  |LC 0700-0730 (0.5)
+                |CP 0700-1500 (8.0)
+
+Tue   ^ Sean   |LC 0630-1430 (8.0)
+               |CP 1430-1530 (1.0)
+      - Pla   |CP 1100-1500 (4.0)
+      
+Wed   * Millie  |LC 0700-0730 (0.5)
+                |CP 0700-1530 (8.5)
+      = Pla    |CP 1100-1430 (3.5)
+
+Lucy: Can't work this week
+|==========================================================================|
+| For week starting    Mon   22/02/2021                                    |
+|==========================================================================|
+| Pos   Time           Mon        Tue        Wed        Thu        Fri     |
+|--------------------------------------------------------------------------|
+|==========================================================================|
+|       CP                                                                 |
+| a    0730-1530|      Nere       Nere       Nere       Nere       Nere    |
+| b    0700-1430|7.5~  Millie&    Bea        Millie*    Millie     Millie  |
+| c    1100-1530|4.5   /          Pla-       Pla=       Pla        Pla     |
+|                                                                          |
+|       LC                                                                 |
+| d    0630-1500|      Mony       Mony       Mony       Mony       Mony    |
+| e    0630-1430|8.0   Sean^      Sean^      Bea        Bea        Bea     |
+|                                                                          |
+|==========================================================================|-->
+<!--
+
+
+For this week
+Millie  31.5 - 23.5 = 8 ($168)
+Bea     23.0 - 23.5 = -0.5 ($0)
+Pla     16.5 (297)
+
+For previous week
+Millie  PAID
+Bea     4 (84)
+Sean    0
+Lucy    PAID
+
+Plah
+Mon, Tue, Fri -- All day 
+Wed- Day off
+Thu must finish 1430
+
+
+_______________________________________________________________________
+------------------ start PREV week ------------------------------------
+
+Wed   & Millie |CP 0730-1500 (7.5)
+      $ Bea   |LC 0700-1200 (5.0)
+      ^ Lucy  |LC 1030-1430 (4.0)
+              |CP 1430-1530 (1.0)
+
+Thu   @ Millie |CP 0700-1530 (8.5)
+      @ Sean  |CP 0700-1530 (8.5) 
+
+Fri   # Millie |LC 0530-0730 (2.0)
+               |CP 0730-1530 (8.0)
+      # Sean  |LC 0530-0730 (2.0)
+              |CP 0730-1530 (8.0) 
+      + Bea    |LC 0630-1430 (8.0)
+|=====================================================================|
+| For week starting    Mon   18/01/2021                               |
+|=====================================================================|
+| Pos   Time           Mon       Tue       Wed       Thu      Fri     |
+|---------------------------------------------------------------------|
+|=====================================================================|
+|       CP                                                            |
+| a    0730-1530|      Nere      Nere      Nere    Sean@  <del>Nere</del>Millie# |
+| b    0730-1530|8.0   Bea      Millie  Mill&/Lucy^  Millie@  Sean#   |
+| c    1030-1530|5.0   /         /         /         /        /       |
+|                                                                     |
+|       LC                                                            |
+| d    0630-1500|      Mony      Mony      Mony      Mony     Mony    |
+| e    0700-1430|7.5   Sean      Bea     Bea$/Lucy^  Lucy     Bea     |
+|                                                                     |
+|=====================================================================|
+_______________________________________________________________________
+--------------------- end PREV week ----------------------------------- 
+
+
+
+--><!--
+Millie 34 - 23 = 11 (231)
+Sean 26- 23    = 3  (63)
+Bea 28.5- 23   = 5.5 (115.5)
+-->
+</em>
+</span></span></div>
+</pre>
+</body>
 </html>
